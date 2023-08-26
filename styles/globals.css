@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+  background: #000;
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  position: fixed;
+  top: 50px;
+  right: 25px;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: #fff;
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: #fff;
+}
+
+/* SLICK JS DOTS */
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  gap: 0.8rem;
+}
+
+.slick-dots button {
+  width: 1rem;
+  height: 1rem;
+  padding: 1;
+  border: none;
+  border-radius: 100%;
+  background-color: white !important;
+  text-indent: -9999px;
+}
+
+.slict-dots li {
+  margin: 0 1rem;
+}
+
+.slick-dots li.slick-active button {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #00c6ff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 198 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #0072ff var(--tw-gradient-to-position);
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .container-fit {
+    @apply mx-auto p-6 max-w-[1280px] 2xl:max-w-[1440px];
+  }
+
+  .gradient {
+    @apply bg-gradient-to-b from-soft-blue to-hard-blue;
+  }
+}

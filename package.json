@@ -1,0 +1,43 @@
+{
+  "name": "code-crafters-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "20.5.3",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "axios": "^1.4.0",
+    "clsx": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "isomorphic-dompurify": "^1.8.0",
+    "lottie-react": "^2.4.0",
+    "moment": "^2.29.4",
+    "next": "13.4.19",
+    "nprogress": "^0.2.0",
+    "postcss": "8.4.28",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
+    "react-slick": "^0.29.0",
+    "recoil": "^0.7.7",
+    "sharp": "^0.32.5",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/nprogress": "^0.2.0",
+    "@types/react-slick": "^0.23.10",
+    "@types/uuid": "^9.0.2"
+  }
+}
