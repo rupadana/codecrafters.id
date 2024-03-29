@@ -46,11 +46,6 @@ class AddSeoDefaults
                 ->rel('manifest')
                 ->href('/site.webmanifest'),
 
-            LinkMeta::make()
-                ->rel('mask-icon')
-                ->attr('color', '#3b82f6')
-                ->href('/safari-pinned-tab.svg'),
-
             Meta::make()
                 ->name('theme-color')
                 ->content('#3b82f6'),
