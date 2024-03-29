@@ -20,7 +20,7 @@ class Home extends Component
     {
         seo()
             ->title($title = config('app.name'))
-            ->description($description = 'Lorem ipsum...')
+            ->description($description = 'Collaborate with our passionate community to develop and improve open-source projects. Share your skills, learn from others, and make a lasting impact on the developer ecosystem.')
             ->canonical($url = route('home'))
             ->addSchema(
                 Schema::webPage()
