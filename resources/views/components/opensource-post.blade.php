@@ -22,7 +22,6 @@
     </a>
   </h3>
   <p class="text-gray-600 dark:text-gray-300">
-    Finding the right open source project for your first contribution can feel daunting. It took me years to find a
-    repository that fit my skills and interests.
+    {{$post->description}}
   </p>
 </div>
