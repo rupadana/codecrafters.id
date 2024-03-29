@@ -1,49 +1,16 @@
 <div>
   <x-hero title="Home" />
 
-  <x-container>
-    <h2 class="mb-8 text-4xl">
-      Latest Posts
-    </h2>
+  <x-sections.project />
 
-    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-      @foreach ($posts as $post)
-        <div>
-          <a
-            class="*:transition group"
-            href="{{ $post->url }}"
-            wire:navigate
-          >
-            <div class="w-full h-48 mb-2 overflow-hidden border rounded-lg group-hover:brightness-90">
-              @if ($post->image)
-                <img
-                  class="object-cover w-full h-full"
-                  src="{{ $post->image->url }}"
-                  alt="{{ $post->image->alt ?? $post->title }}"
-                />
-              @else
-                <div class="flex items-center justify-center w-full h-full text-gray-400 bg-gray-200">
-                  Article
-                </div>
-              @endif
-            </div>
+  <x-sections.sponsors />
 
-            <h3 class="text-lg text-gray-700 group-hover:text-primary-500">
-              {{ $post->title }}
-            </h3>
-          </a>
-        </div>
-      @endforeach
+{{--  @if(count($posts) > 0)--}}
+{{--    <x-sections.latest-posts :posts="$posts" />--}}
+{{--  @endif--}}
 
-      @empty($posts)
-        <div>No posts yet.</div>
-      @endempty
-    </div>
+  <x-sections.teams />
 
-    @if ($posts->hasPages())
-      <div class="pt-6 mt-6 border-t">
-        {{ $posts->links() }}
-      </div>
-    @endif
-  </x-container>
+  <x-sections.cta />
+
 </div>

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@config './tailwind.config.js';
+
+@layer components {
+    .navbar-active .hamburger div:first-child {
+        @apply rotate-45 translate-y-1.5;
+    }
+
+    .navbar-active .hamburger div:last-child {
+        @apply -rotate-45 -translate-y-1;
+    }
+
+    .navbar-active div:first-child div:first-child div:last-child {
+        @apply block lg:flex
+    }
+}
+
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.z-3 {
+    z-index: 3;
+}
+
+.z-4 {
+    z-index: 4;
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+.z-6 {
+    z-index: 6;
+}

@@ -6,24 +6,8 @@
   </div>
 
   <article>
-    <x-hero :title="$post->title">
-      @slot('afterTitle')
-        <div>Posted by {{ $post->user->name }}</div>
 
-        <div
-          class="inline-flex items-center text-xs cursor-help"
-          x-tooltip.raw="{{ $post->published_at->format('F j, Y') }}"
-        >
-          <x-heroicon-o-calendar class="w-3 h-3 mr-1" />
-
-          <time datetime="{{ $post->published_at->format('Y-m-d H:i:s') }}">
-            {{ $post->published_at->diffForHumans() }}
-          </time>
-        </div>
-      @endslot
-    </x-hero>
-
-    <x-container>
+    <x-container class='pt-20 md:pt-0'>
       <div class="prose max-w-none">
         @foreach ($post->blocks as $block)
           @switch($block->type)

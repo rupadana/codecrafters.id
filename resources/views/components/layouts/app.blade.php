@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
-    {{ seo()->render() }}
+<html lang="en">
 
-    @stack('head')
+<head>
 
-    @livewireStyles
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-  </head>
+  {{ seo()->render() }}
 
-  <body class="font-sans text-base leading-normal tracking-normal text-gray-800">
-    <div class="flex flex-col min-h-screen">
-      <x-sections.header />
+  @stack('head')
 
-      <div class="flex-1">
-        {{ $slot }}
-      </div>
+  @livewireStyles
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-      <x-sections.footer />
-    </div>
+<body>
+<x-sections.header />
 
-    @livewireScriptConfig
-    @stack('scripts')
-  </body>
+
+{{ $slot }}
+
+<x-sections.footer />
+
+@livewireScriptConfig
+@stack('scripts')
+</body>
+
 </html>

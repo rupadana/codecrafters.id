@@ -66,7 +66,7 @@ class PostResource extends Resource
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                                     ->placeholder('Enter a title')
-                                    ->live()
+                                    ->live(true)
                                     ->afterStateUpdated(function (Get $get, Set $set, string $operation, ?string $old, ?string $state) {
                                         if (($get('slug') ?? '') !== Str::slug($old) || $operation !== 'create') {
                                             return;

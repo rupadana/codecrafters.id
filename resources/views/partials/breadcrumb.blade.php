@@ -13,7 +13,7 @@
             </a>
           </li>
         @else
-          <li class="{{ ! $loop->last ? 'text-white' : 'text-primary-500' }}">
+          <li class="{{ ! $loop->last ? 'text-white' : 'text-primary' }}">
             {{ $breadcrumb->title }}
           </li>
         @endif
