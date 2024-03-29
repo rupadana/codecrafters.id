@@ -10,6 +10,7 @@
         <li role="listitem"><a href="{{url('/#services')}}" class="hover:text-primary">Services</a></li>
         <li role="listitem"><a href="{{url('/#teams')}}" class="hover:text-primary">Teams</a></li>
         <li role="listitem"><a href="{{url('/opensource')}}" class="hover:text-primary">Open Source</a></li>
+        <li role="listitem"><a href="https://monitoring.codecrafters.id/status/codecrafters" class="hover:text-primary">Monitoring</a></li>
       </ul>
       <div class="m-auto flex w-max items-center justify-between space-x-4">
         <a href="mailto:teams@codecrafters.id" aria-label="send mail">
